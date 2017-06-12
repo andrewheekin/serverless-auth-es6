@@ -19,7 +19,7 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/,
-      query: { presets: ['es2015'] }  // ES5 from ES6
+      query: { presets: ['es2015', 'stage-0'] }  // es2015 allows ES6, stage-0 preset allows ES7
     }],
     rules: [{
       test: /\.scss$/,
