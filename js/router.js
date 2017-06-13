@@ -1,16 +1,17 @@
 'use strict';
 
 import Navigo from 'navigo';
-
-//components scripts
-// import { about } from '../components/about';
+import { authCheck } from './auth';
+import { signupView } from '../components/signup';
+import { home } from '../components/home';
 
 
 // let router = new Navigo(null, true, '#!'); // using hash
 let router = new Navigo(null, false); // using HTML5 History API
 router.on({
   // main pages
-  // 'about': () => { about() }
+  'signup': () => { signupView() },
+  'home': () => { home() },
 });
 
 // default route
